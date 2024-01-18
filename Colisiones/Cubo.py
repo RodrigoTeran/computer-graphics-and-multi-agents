@@ -25,12 +25,12 @@ class Cubo:
         #Se inicializa una posicion aleatoria en el tablero
         self.Position = []
         self.Position.append(random.randint(-1 * self.DimBoard, self.DimBoard))
-        self.Position.append(5.0)
+        self.Position.append(self.radius)
         self.Position.append(random.randint(-1 * self.DimBoard, self.DimBoard))
         #Se inicializa un vector de direccion aleatorio
         self.Direction = []
         self.Direction.append(random.random())
-        self.Direction.append(5.0)
+        self.Direction.append(self.radius)
         self.Direction.append(random.random())
         #Se normaliza el vector de direccion
         m = math.sqrt(self.Direction[0]*self.Direction[0] + self.Direction[2]*self.Direction[2])
