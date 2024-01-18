@@ -22,6 +22,7 @@ class Cubo:
         
         self.DimBoard = dim
         self.radius = 4 * scale
+        self.color = [1.0, 1.0, 1.0]
         #Se inicializa una posicion aleatoria en el tablero
         self.Position = []
         self.Position.append(random.randint(-1 * self.DimBoard, self.DimBoard))
@@ -62,6 +63,7 @@ class Cubo:
         self.Direction[0] = 0
         self.Direction[1] = 0
         self.Direction[2] = 0
+        self.color = [1.0, 0.0, 0.0]
 
     def drawFaces(self):
         glBegin(GL_QUADS)
@@ -105,6 +107,6 @@ class Cubo:
         glPushMatrix()
         glTranslatef(self.Position[0], self.Position[1], self.Position[2])
         glScaled(self.radius,self.radius,self.radius)
-        glColor3f(1.0, 1.0, 1.0)
+        glColor3f(*self.color)
         self.drawFaces()
         glPopMatrix()

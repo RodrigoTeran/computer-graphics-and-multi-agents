@@ -109,7 +109,7 @@ def detect_colisiones():
                     math.pow((cx_cube_1 - cx_cube_2), 2) +
                     math.pow((cy_cube_1 - cy_cube_2), 2) +
                     math.pow((cz_cube_1 - cz_cube_2), 2)
-                )
+                ) - 5
             r_cube_1 = cube_1.radius
             r_cube_2 = cube_2.radius
             r_sum = r_cube_1 + r_cube_2
