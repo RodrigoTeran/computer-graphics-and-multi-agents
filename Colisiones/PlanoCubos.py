@@ -89,7 +89,7 @@ def Init():
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL)
     
     for i in range(ncubos):
-        cubos.append(Cubo(DimBoard, 1.0, random.random() * 2 + 1))
+        cubos.append(Cubo(DimBoard, 1.0, random.random() * 1.5 + 1))
 
 def detect_colisiones():
     for i in range(len(cubos)):
